@@ -4,22 +4,22 @@
       "make": "Nissan",
       "model": "Rogue",
       "year": "2006",
-      "price": "8999",
-      "description": "This is an immaculate 2006 Nissan Rogue with only 25000 miles on it. Leather seats, power everything."
+      "price": "12000",
+      "description": "This is an immaculate 2006 Nissan Rogue with only 21004 miles on it. Leather seats, power everything."
     },
     {
-      "make": "Nissan",
-      "model": "Rogue",
-      "year": "2006",
-      "price": "8999",
-      "description": "This is an immaculate 2006 Nissan Rogue with only 25000 miles on it. Leather seats, power everything."
+      "make": "Toyota",
+      "model": "Sequoia",
+      "year": "2004",
+      "price": "4500",
+      "description": "This is a 2006 Toyota Rogue with only 45000 miles on it. Leather seats, power everything."
     },
     {
-      "make": "Nissan",
-      "model": "Rogue",
-      "year": "2006",
-      "price": "8999",
-      "description": "This is an immaculate 2006 Nissan Rogue with only 25000 miles on it. Leather seats, power everything."
+      "make": "Chevy",
+      "model": "Camaro",
+      "year": "1967",
+      "price": "128999",
+      "description": "This is an immaculate 1967 Chevy Camaro with only 10000 miles on it. Leather seats, power everything."
     }
   ]
 }
