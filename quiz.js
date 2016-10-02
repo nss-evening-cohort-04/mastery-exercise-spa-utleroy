@@ -11,15 +11,20 @@
 				currentCarDisplay = `<div>`
 			for (var i = 0; i < carsData.cars.length; i++) {
 				currentCar = carsData.cars[i];
-				currentCarDisplay += `<p>${carsData.cars[i].make}</p>`
-				currentCarDisplay += `<p>${carsData.cars[i].model}</p>`
+				currentCarDisplay += `<div class="col-sm-4" id="car-border">`
+					currentCarDisplay += `<p>${carsData.cars[i].make}</p>`
+					currentCarDisplay += `<p>${carsData.cars[i].model}</p>`
+					currentCarDisplay += `<p>${carsData.cars[i].year}</p>`
+					currentCarDisplay += `<p>${carsData.cars[i].price}</p>`
+					currentCarDisplay += `<p>${carsData.cars[i].description}</p>`
+				currentCarDisplay += `</div>`
 				currentCarDisplay += `</div>`
 
 				carsElement.innerHTML = currentCarDisplay;
 				console.log("currentCarDisplay", currentCarDisplay);
 			}
 
-			console.log("carsData", carsData)
+			// console.log("carsData", carsData)
 
 			return newCarLot;
 		}
