@@ -2,19 +2,26 @@
 	var CarLot = (function(newCarLot) {
 		var carsData = [];
 		var currentCar;
+		var currentCarDisplay;
 
 		function populatePage () {
 			carsData = JSON.parse(this.response);;
 			var carsElement = document.getElementById("output")
-				var currentCarDisplay = "<div>CARS</div>";
+
+				currentCarDisplay = `<div>`
 			for (var i = 0; i < carsData.cars.length; i++) {
-				currentCar = carsData[i];
+				currentCar = carsData.cars[i];
+				currentCarDisplay += `<p>${carsData.cars[i].make}</p>`
+				currentCarDisplay += `<p>${carsData.cars[i].model}</p>`
+				currentCarDisplay += `</div>`
 
-		carsElement.innerHTML = currentCarDisplay;
+				carsElement.innerHTML = currentCarDisplay;
+				console.log("currentCarDisplay", currentCarDisplay);
 			}
-		console.log("carsData", carsData)
 
-return newCarLot;
+			console.log("carsData", carsData)
+
+			return newCarLot;
 		}
 
 
@@ -25,7 +32,7 @@ return newCarLot;
 		oReq.open("GET", "inventory.JSON");
 		oReq.send();
 
-})(CarLot || {});
+	})(CarLot || {});
 
 
 
