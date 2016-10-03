@@ -74,6 +74,6 @@ var CarLot = (function () {
       });
     }
   };
-
+2
 })();
 ```

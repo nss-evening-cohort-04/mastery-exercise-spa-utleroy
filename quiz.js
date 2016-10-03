@@ -1,66 +1,45 @@
-	// function for all of the event handlers
-	var CarLot = (function(newCarLot) {
-		var carsData = [];
-		var currentCar;
-		var currentCarDisplay;
+"use strict";
 
-		function populatePage () {
-			carsData = JSON.parse(this.response);;
-			var carsElement = document.getElementById("output")
+//augmenting iife
+var CarLot = (function(originalCarLot) {
 
-				currentCarDisplay = `<div>`
-			for (var i = 0; i < carsData.cars.length; i++) {
-				currentCar = carsData.cars[i];
-				currentCarDisplay += `<div class="col-sm-4" id="car-border">`
-					currentCarDisplay += `<p>${carsData.cars[i].make}</p>`
-					currentCarDisplay += `<p>${carsData.cars[i].model}</p>`
-					currentCarDisplay += `<p>${carsData.cars[i].year}</p>`
-					currentCarDisplay += `<p>${carsData.cars[i].price}</p>`
-					currentCarDisplay += `<p>${carsData.cars[i].description}</p>`
-				currentCarDisplay += `</div>`
-				currentCarDisplay += `</div>`
+// this is the inventory from the callback on the carlot.js
+  originalCarLot.populatePage = function(inventory) { 
+   var displayCar = document.getElementById("container");
+   var output = "";
 
-				carsElement.innerHTML = currentCarDisplay;
-				console.log("currentCarDisplay", currentCarDisplay);
-			}
+// loops through inventory so that I can populate the DOM
+for(var i = 0; i < inventory.length; i++) {
+	var currentCar = inventory[i];
+      
+  
+//  <div class="col-xs-3 car ${currentCar.color}"> accesses the color property from the JSON file and references each color via the css properties that were set up for the vehicle color. 
+    output+= 
+    `<div class="col-xs-3 car container" style="border-color: ${currentCar.color}">
+    		<img src="..." alt="..." class="img-thumbnail">
+      <h4>${currentCar.price}${currentCar.make}${currentCar.model}</h4>
+      <p>${currentCar.year}</p>
+      <h5>${currentCar.color}</h5>
+      <h6 class="inputBox">${currentCar.description}</h6>
+    </div>`
+      
+    displayCar.innerHTML = output; 
+      }
 
-			// console.log("carsData", carsData)
+// this references the activateEvents function in events js
+CarLot.activateEvents();
 
-			return newCarLot;
-		}
+}
 
+  return originalCarLot
 
-
-
-		var oReq = new XMLHttpRequest();
-		oReq.addEventListener("load", populatePage);
-		oReq.open("GET", "inventory.JSON");
-		oReq.send();
-
-	})(CarLot || {});
+})(CarLot || {});
 
 
+// Calling loadInventory which passes populatePage Inventory and builds string/prints to DOM
+CarLot.loadInventory(CarLot.populatePage);
 
 
-// 	original.activateEvents = function() {
-// 		let allCars = document.getElementsByClassName("output");
-// 		for (var i = 0; i < allCars.length; i++) {
-// 			let carDiv = allCars[i];
-// console.log("test")
 
 
-		// carDiv.addEventListener("click", function(){
-		// 	let userClick = carDiv.classList.add("clicked");
-		// 	original.resetBorder(carDiv, userClick, allCars);	
-		// }
-  // Loop over the inventory and populate the page
-  // Now that the DOM is loaded, establish all the event listeners needed
-  // CarLot.activateEvents();
-// }
 
-// Load the inventory and send a callback function to be
-// invoked after the process is complete
-// CarLot.loadInventory();
-
-
-// console.log(vehicleDiv)
