@@ -1,6 +1,3 @@
-
-"use-strict";
-
 //original iife
 
 var CarLot = (function () {

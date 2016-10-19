@@ -1,5 +1,3 @@
-"use strict";
-
 var CarLot = (function(originalCarLot) {
 
 // function for all of the event handlers 

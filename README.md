@@ -76,4 +76,37 @@ var CarLot = (function () {
   };
 2
 })();
+
+
+Lee, This quiz needs a little bit of work before I can approve it. 
+1. Every file needs to be properly indented - for both your sanity and mine. 
+2. you have a broken image that appears on each car and throws errors. either put in a dummy image or remove the image tag 
+3. when I click on a car the color should change (it does this!) but the border thickness should be thicker. 
+fix these minor things and then let me know and i will take another look
 ```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

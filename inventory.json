@@ -1,6 +1,7 @@
 {
   "cars": [
     {
+      "image": "rogue.jpg", 
       "make": "Nissan",
       "model": "Rogue",
       "color": "red",
@@ -9,6 +10,7 @@
       "description": "This is an immaculate 2006 Nissan Rogue with only 21004 miles on it. Leather seats, power everything."
     },
     {
+      "image": "sequoia.jpg",
       "make": "Toyota",
       "model": "Sequoia",
       "color": "blue",
@@ -17,6 +19,7 @@
       "description": "This is a 2006 Toyota Sequoia with only 45000 miles on it. Leather seats, power everything."
     },
     {
+      "image": "camaro.jpg",
       "make": "Chevy",
       "model": "Camaro",
       "color": "Green",
