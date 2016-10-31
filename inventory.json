@@ -1,0 +1,31 @@
+{
+  "cars": [
+    {
+      "image": "rogue.jpg", 
+      "make": "Nissan",
+      "model": "Rogue",
+      "color": "red",
+      "year": "2006",
+      "price": "12000",
+      "description": "This is an immaculate 2006 Nissan Rogue with only 21004 miles on it. Leather seats, power everything."
+    },
+    {
+      "image": "sequoia.jpg",
+      "make": "Toyota",
+      "model": "Sequoia",
+      "color": "blue",
+      "year": "2004",
+      "price": "4500",
+      "description": "This is a 2006 Toyota Sequoia with only 45000 miles on it. Leather seats, power everything."
+    },
+    {
+      "image": "camaro.jpg",
+      "make": "Chevy",
+      "model": "Camaro",
+      "color": "Green",
+      "year": "1967",
+      "price": "128999",
+      "description": "This is an immaculate 1967 Chevy Camaro with only 10000 miles on it. Leather seats, power everything."
+    }
+  ]
+}
